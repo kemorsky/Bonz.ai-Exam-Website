@@ -1,0 +1,597 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: #023047 ;
+}
+
+.wrapper-startsida {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "header-start header-start header-start header-start header-start header-start"
+    "searchbar searchbar searchbar searchbar searchbar searchbar "
+    ". info info info info ."
+    ". info info info info ."
+    ". info info info info ."
+    "find-room find-room gibberish gibberish book-now book-now"
+    "find-room find-room gibberish gibberish book-now book-now"
+    "find-room find-room gibberish gibberish book-now book-now"
+    "footer footer footer footer footer footer" ;
+}
+
+.start-logo {
+    width: 52px;
+    height: 52px;
+    margin: 5px;
+    margin-left: 15px;
+}
+
+.links {
+    padding: 1rem;
+    font-size: 18px;
+}
+
+.staff, .bookings, .start {
+    margin-right: 20px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.offers {
+    margin-right: 20px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.searchbar {
+    grid-area: searchbar;
+    background-color: #787276;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.searchbar-input, .filter-input {
+    padding: 0.3rem;
+    border-radius: 20px;
+    color: gray;
+    transform: translateX(-5px);
+}
+
+.search-button {
+    transform: translate(100px, 43px);
+    width: 185px;
+    height: 50px;
+    background-color: rgba(228, 228, 228, 0.692);
+    border-radius: 20px;
+    font-size: 18px;
+}
+
+.search-window, .filter-window, .date-window  {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.filter-window p, .date-window p {
+    transform: translateX(20px);
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.search-window p {
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.filter-input {
+    margin-left: 20px;
+}
+
+.header-start {
+    grid-area: header-start;
+    background-color: #98c1d9;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.25);
+}
+
+.info {
+    background-color: rgb(40, 40, 40);
+    grid-area: info;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 8px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(photos/01-night.jpg);
+    background-repeat: no-repeat;
+    background-size: 48%;
+    background-position: center +2%;
+}
+
+.info .start-window-description {
+    max-width: 700px;
+}
+
+.learn-more {
+    width: 250px;
+    height: 80px;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+.start-window-description {
+    max-width: 500px;
+    text-align: left;
+    align-self: center;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(65, 62, 62);
+    padding: 2rem;
+    border-radius: 10px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.info h1 {
+    max-width: 700px;
+    align-self: center;
+    font-size: 34px;
+    color: white;
+    margin-top: 375px;
+    padding-top: 1rem;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.find-room {
+    grid-area: find-room;
+    background-color: rgb(40, 40, 40);
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 8px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(photos/09-day.jpg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center +5%;
+}
+
+.start-window-title {
+    margin-top: 300px;
+    max-width: 700px;
+    align-self: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 1.2rem;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.gibberish {
+    grid-area: gibberish;
+    background-color: rgb(40, 40, 40);
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 8px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(photos/02-day.jpg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center +5%;
+}
+
+.book-now {
+    grid-area: book-now;
+    background-color: rgb(40, 40, 40);
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 8px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(photos/09-day.jpg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center +5%;
+}
+
+.start-footer {
+    grid-area: footer;
+    background-color:  #219ebc;
+    display: flex;
+    justify-content: space-around;
+    background-image: url(logo/bonz.ai-logo-black-landscape.png);
+    background-repeat: no-repeat;
+    background-size: 10%;
+    background-position: center +85%;
+    height: 300px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.Address, .contact, .sponsors {
+    color: black;
+    padding: 1.4rem;
+    grid-column: 2 / span 1;
+    font-style: Roboto;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.sponsors {
+    align-self: flex-start;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.mail {
+    color: black;
+}
+
+.phone {
+    padding-top: 0.9rem;
+    color: black;
+}
+
+@media screen and (max-width: 375px) {
+
+    .wrapper-startsida {
+        grid-template-columns: 100%;
+        grid-auto-rows: auto;
+        grid-template-areas: 
+        "header-start"
+        "searchbar"
+        "info"
+        "info"
+        "find-room"
+        "gibberish"
+        "book-now"
+        "footer" ;
+    }
+
+    .searchbar {
+        padding: 1.3rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .searchbar-input, .filter-input {
+        padding: 0.15rem;
+        border-radius: 20px;
+        color: gray;
+        transform: translateX(0px);
+        height: 35px;
+    }
+
+    .search-window p {
+        transform: translateX(18px);
+    }
+
+    .search-button {
+        transform: translate(0px, 1px);
+        width: 175px;
+        margin-top: 30px;
+    }
+
+    .filter-input {
+        margin-left: 0px;
+    }
+
+    .start-window-title {
+        margin-top: 250px;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .start-window-description {
+        max-width: 300px;
+        font-size: 16px;
+    }
+
+    .info h1 {
+        max-width: 320px;
+        text-align: center;
+        margin-top: 250px;
+    }
+
+    .info .start-window-description {
+        max-width: 300px;
+    }
+
+    .info, .gibberish, .book-now, .find-room {
+        background-size: 100%;
+    }
+}
+
+/** Search results start here **/
+
+.wrapper-searchsida {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "header-start header-start header-start header-start header-start header-start"
+    "searchbar searchbar searchbar searchbar searchbar searchbar "
+    "room1 room1 room1 room2 room2 room2"
+    "room1 room1 room1 room2 room2 room2"
+    "room3 room3 room3 room4 room4 room4"
+    "room3 room3 room3 room4 room4 room4"
+    "room5 room5 room5 room6 room6 room6"
+    "room5 room5 room5 room6 room6 room6"
+    "footer footer footer footer footer footer" ;
+}
+
+.room1, .room2, .room3, .room4, .room5, .room6 {
+    background-color:  rgb(40, 40, 40);
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 8px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: left +5%;
+}
+
+.room_title {
+    max-width: 700px;
+    align-self: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 1.2rem;
+    font-family: 'Fira Sans', sans-serif;
+    margin-left: 390px;
+}
+
+.room_description {
+    max-width: 430px;
+    text-align: left;
+    align-self: center;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(65, 62, 62);
+    padding: 2rem;
+    border-radius: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    margin-left: 460px;
+}
+
+.booking-button, .learn-more, .search_button {
+    padding: 1rem;
+    background: rgb(7, 169, 7);
+    color: white;
+    font-style: Roboto;
+    font-size: 19px;
+    border: 2px solid limegreen;
+}
+
+.booking-button {
+    margin-left: 180px;
+}
+
+.room1 {
+    grid-area: room1;
+    background-image: url(photos/01-day.jpg);
+}
+
+.room2 {
+    grid-area: room2;
+    background-image: url(photos/08-day.jpg);
+}
+
+.room3 {
+    grid-area: room3;
+    background-image: url(photos/04-day.jpg);
+}
+
+.room4 {
+    grid-area: room4;
+    background-image: url(photos/05-day.jpg);
+}
+
+.room5 {
+    grid-area: room5;
+    background-image: url(photos/06-day.jpg);
+}
+
+.room6 {
+    grid-area: room6;
+    background-image: url(photos/07-day.jpg);
+}
+
+@media screen and (max-width: 375px) {
+
+    .wrapper-searchsida {
+        grid-template-columns: 100%;
+        grid-auto-rows: auto;
+        grid-template-areas: 
+        "header-start"
+        "searchbar"
+        "room1"
+        "room2"
+        "room3"
+        "room4"
+        "room5"
+        "room6"
+        "footer" ;
+    }
+
+    .room1, .room2, .room3, .room4, .room5, .room6 {
+        display: flex;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center +5%;
+    }
+
+    .room_title {
+        max-width: 350px;
+        margin-left: 0px;
+        margin-top: 250px;
+    }
+
+    .room_description {
+        max-width: 300px;
+        font-size: 16px;
+        margin-left: 0px;
+    }
+
+    .booking-button {
+        margin-left: 0px;
+    }
+    
+    .start-footer {
+      height: 690px;
+      flex-direction: column;
+      justify-content: center;
+      background-size: 80%;
+      background-position: center +93%;
+    }
+
+    .Address, .contact, .sponsors {
+        margin-left: 70px;
+    }
+
+    .contact {
+        margin-bottom: 170px;
+    }
+
+    .footer-title {
+        font-size: 22px;
+    }
+
+    .footer-p {
+        font-size: 15px;
+    }
+
+    .contact a {
+        font-size: 17px;
+    }
+}
+
+/** Offers and activities start here **/
+
+.wrapper-offersida {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "header-start header-start header-start header-start header-start header-start"
+    "searchbar searchbar searchbar searchbar searchbar searchbar "
+    ". spa spa nature nature ."
+    ". spa spa nature nature ."
+    ". activities activities movie-night movie-night ."
+    ". activities activities movie-night movie-night ."
+    ". . restaurant restaurant . ."
+    ". . restaurant restaurant . ."
+    "footer footer footer footer footer footer" ;
+}
+
+.spa, .nature, .activities, .movie-night, .restaurant {
+    background-color: rgb(40, 40, 40);
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 8px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-position: center +2%;
+}
+
+.activity-description {
+    max-width: 500px;
+    text-align: left;
+    align-self: center;
+    font-size: 18px;
+    color: white;
+    background-color: 	#363636;
+    padding: 2rem;
+    border-radius: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    margin-top: -1px;
+}
+
+.activity-title {
+    max-width: 500px;
+    align-self: center;
+    font-size: 25px;
+    color: white;
+    margin-top: 305px;
+    padding-top: 1rem;
+    font-family: 'Fira Sans', sans-serif;
+    text-align: center;
+}
+
+.spa {
+    grid-area: spa;
+    background-image: url(photos/spa.jpg);
+    background-size: 72%;
+}
+
+.nature {
+    grid-area: nature;
+    background-image: url(photos/nature.jpg);
+    background-size: 72%;
+}
+
+.activities {
+    grid-area: activities;
+    background-image: url(photos/activities.jpg);
+    background-size: 72%;
+}
+
+.movie-night {
+    grid-area: movie-night;
+    background-image: url(photos/movie-night.jpg);
+    background-size: 72%;
+}
+
+.restaurant {
+    grid-area: restaurant;
+    background-image: url(photos/restaurant.webp);
+    background-size: 76%;
+}
+
+@media screen and (max-width: 375px) {
+
+    .wrapper-offersida {
+        grid-template-columns: 100%;
+        grid-auto-rows: auto;
+        grid-template-areas: 
+        "header-start"
+        "searchbar"
+        "spa"
+        "nature"
+        "activities"
+        "movie-night"
+        "restaurant"
+        "footer" ;
+    }
+
+    .spa, .nature, .activities, .movie-night, .restaurant {
+        background-size: 100%
+    }
+
+    .activity-title {
+        margin-top: 250px;
+        max-width: 370px;
+    }
+    
+}
